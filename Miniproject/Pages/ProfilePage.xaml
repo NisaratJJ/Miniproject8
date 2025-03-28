@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Miniproject.Pages.ProfilePage"
+             xmlns:viewmodel="clr-namespace:Miniproject.Viewmodel"
+             xmlns:model="clr-namespace:Miniproject.Model"
+             x:DataType="viewmodel:ProfileViewmodel"
+             Title="ProfilePage"
+             BackgroundColor="#F5F5F5">
+    <CollectionView ItemsSource="{Binding Student}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Students">
+                <VerticalStackLayout Padding="0"
+                                     Spacing="10">
+                    <Frame Grid.Row="0"
+                           BackgroundColor="#FFFBD70B"
+                           Padding="0"
+                           CornerRadius="0">
+                        <Grid ColumnDefinitions="Auto,* ,Auto,Auto">
+                            <!-- Logo & Title -->
+                            <HorizontalStackLayout Grid.Column="0"
+                                                   Spacing="10"
+                                                   VerticalOptions="Center">
+                                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mahasarakham_University_Emblem.png/960px-Mahasarakham_University_Emblem.png?20220115135307"
+                                       HeightRequest="100"
+                                       WidthRequest="120"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Mahasarakham University"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+
+
+                            <BoxView Grid.Column="1"/>
+
+                            <!-- Register Button -->
+
+
+                            <!-- Profile Button -->
+                            <Button Grid.Column="2"
+                                    Text="ลงทะเบียนเรียน"
+                                    BackgroundColor="#FF404240"
+                                    TextColor="White"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    WidthRequest="150"
+                                    HeightRequest="50"
+                                    Margin="0,0,20,0"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewmodel}}, Path=GotoPageCommand}"
+                                    CommandParameter="RegisterPage"/>
+                            <ImageButton Grid.Column="3"
+                                         Source="https://cdn-icons-png.flaticon.com/512/10751/10751558.png"
+                                         BackgroundColor="#FFFBD70B"
+                                         WidthRequest="50"
+                                         HeightRequest="50"
+                                         Margin="0,0,20,0"
+                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewmodel}}, Path=GotoPageCommand}"
+                                         CommandParameter="HomePage"/>
+                        </Grid>
+                    </Frame>
+
+                    <HorizontalStackLayout Spacing="10" Padding="10,0,0,0">
+                        <!-- Border รอบรูปภาพ -->
+                        <Border Padding="0,0,0,0"
+                                StrokeShape="RoundRectangle 30"
+                                Stroke="LightGray"
+                                StrokeThickness="1"
+                                BackgroundColor="#F5F5F5">
+                            <Image Source="{Binding ImgUrl}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="200"
+                                   WidthRequest="200"
+                                   BackgroundColor="LightGray"
+                                   Clip="RoundRectangle 30"/>
+                        </Border>
+
+                        <!-- ข้อมูลนักศึกษา -->
+                        <VerticalStackLayout Spacing="5"
+                                Padding="20,25,0,0">
+                            <Label Text="{Binding StudentId, StringFormat='รหัสนิสิต: {0}'}"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TextColor="#333333"/>
+
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="{Binding FirstName, StringFormat='ชื่อ: {0}'}"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="#333333"/>
+                                <Label Text="{Binding LastName, StringFormat=' {0}'}"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="#333333"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="{Binding Email, StringFormat='อีเมล: {0}'}"
+                                   FontSize="18"
+                                   TextColor="#555555"/>
+
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="{Binding Faculty, StringFormat='คณะ: {0}'}"
+                                       FontSize="18"
+                                       TextColor="#555555"/>
+                                <Label Text="{Binding Major, StringFormat='สาขา: {0}'}"
+                                       FontSize="18"
+                                       TextColor="#555555"/>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="{Binding Year, StringFormat='ปีการศึกษา: {0}'}"
+                                       FontSize="18"
+                                       TextColor="#555555"/>
+                                <Label Text="{Binding Gpa, StringFormat='GPA: {0:F2}'}"
+                                       FontSize="18"
+                                       TextColor="#555555"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+
+
+                    <VerticalStackLayout Margin="0,10,0,0">
+                        <Border Padding="10"
+                                StrokeShape="RoundRectangle 10"
+                                Stroke="LightGray"
+                                StrokeThickness="5"
+                                BackgroundColor="#FFDFDFDF">
+                            <VerticalStackLayout Spacing="10">
+                                <Label Text="รายวิชาที่ลงทะเบียน"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="#333333"/>
+                                <!-- ส่วนหัว: รายวิชาที่ลงทะเบียน -->
+                                <HorizontalStackLayout
+                                    Spacing="10"
+                                    HorizontalOptions="Start">
+                                    <Label Text="ปีการศึกษาที่ 2024 ภาคเรียนที่ "
+                                           FontSize="20"
+                                           TextColor="#333333"
+                                           VerticalOptions="Center"/>
+                                    <Button Text="1"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewmodel}}, Path=TermCommand}"
+                                            CommandParameter="1"
+                                            BackgroundColor="#FFFECB00"
+                                            TextColor="Black"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                            CornerRadius="20"
+                                            WidthRequest="5"
+                                            HeightRequest="5"/>
+                                    <Label Text="| "
+                                           FontSize="14"
+                                           TextColor="#333333"
+                                           VerticalOptions="Center"/>
+                                    <Button Text="2"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewmodel}}, Path=TermCommand}"
+                                            CommandParameter="2"
+                                            BackgroundColor="#FFFECB00"
+                                            TextColor="Black"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                            CornerRadius="20"
+                                            WidthRequest="5"
+                                            HeightRequest="5"/>
+                                    <Label Text="| "
+                                           FontSize="14"
+                                           TextColor="#333333"
+                                           VerticalOptions="Center"/>
+                                    <Button Text="3"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewmodel}}, Path=TermCommand}"
+                                            CommandParameter="3"
+                                            BackgroundColor="#FFFECB00"
+                                            TextColor="Black"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                            CornerRadius="20"
+                                            WidthRequest="5"
+                                            HeightRequest="5"/>
+                                </HorizontalStackLayout>
+
+                                <!-- ส่วนแสดงรายวิชา -->
+                                <Border Padding="2,0,0,0"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="LightGray"
+                                        StrokeThickness="1"
+                                        BackgroundColor="#FFFFFF"
+                                        Margin="0">
+                                    <CollectionView ItemsSource="{Binding CoursesEnrolled}"  Margin="5"> 
+                                        <CollectionView.ItemTemplate >
+                                            <DataTemplate x:DataType="model:CoursesEnrolled" >
+                                                <Border Padding="15,5,0,0"
+                                                        StrokeShape="RoundRectangle 10"
+                                                        Stroke="LightGray"
+                                                        StrokeThickness="1"
+                                                        BackgroundColor="#F5F5F5"
+                                                        Margin="5">
+                                                    <VerticalStackLayout Spacing="5">
+                                                        <!-- ชื่อวิชาและรหัสวิชา -->
+                                                        <Label Text="{Binding CourseName, StringFormat='วิชา: {0}'}"
+                                                               FontSize="18"
+                                                               FontAttributes="Bold"
+                                                               TextColor="#333333"/>
+                                                        <Label Text="{Binding CourseId, StringFormat='รหัสวิชา: {0}'}"
+                                                               FontSize="16"
+                                                               TextColor="#555555"/>
+
+                                                        <!-- ปีการศึกษาและเทอม -->
+                                                        <HorizontalStackLayout Spacing="5">
+                                                            <Label Text="{Binding Year, StringFormat='ปีการศึกษา: {0}'}"
+                                                                   FontSize="16"
+                                                                   TextColor="#555555"/>
+                                                            <Label Text="{Binding Term, StringFormat='เทอม: {0}'}"
+                                                                   FontSize="16"
+                                                                   TextColor="#555555"/>
+                                                        </HorizontalStackLayout>
+
+                                                        <!-- หน่วยกิตและเกรด -->
+                                                        <HorizontalStackLayout Spacing="5">
+                                                            <Label Text="{Binding Credits, StringFormat='หน่วยกิต: {0}'}"
+                                                                   FontSize="16"
+                                                                   TextColor="#555555"/>
+                                                            <Label Text="{Binding Grade, StringFormat='ผลการศึกษา: {0}'}"
+                                                                   FontSize="16"
+                                                                   TextColor="#555555"/>
+                                                        </HorizontalStackLayout>
+
+                                                        <!-- อาจารย์ผู้สอน -->
+                                                        <Label Text="{Binding Instructor, StringFormat='อาจารย์ผู้สอน: {0}'}"
+                                                               FontSize="16"
+                                                               TextColor="#555555"/>
+                                                    </VerticalStackLayout>
+                                                </Border>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                </Border>
+                            </VerticalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

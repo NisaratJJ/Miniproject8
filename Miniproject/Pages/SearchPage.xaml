@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Miniproject.Pages.SearchPage"
+             Title="ค้นหาวิชาเรียน">
+
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <SearchBar x:Name="CourseSearchBar" 
+                   Placeholder="ค้นหารายวิชา..."
+                   TextChanged="OnSearchTextChanged"/>
+
+        <CollectionView x:Name="SearchResults">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="15" BorderColor="#e0e0e0">
+                        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto">
+                            <Label Text="{Binding CourseCode}" 
+                                   FontAttributes="Bold"/>
+                            <Label Text="{Binding CourseName}" 
+                                   Grid.Row="1"/>
+                            <Label Text="{Binding Description}" 
+                                   Grid.Row="2"
+                                   TextColor="Gray"/>
+                            <Button Text="ลงทะเบียน" 
+                                    Grid.Column="1" 
+                                    Grid.RowSpan="3"
+                                    BackgroundColor="#4b6cb7"
+                                    Clicked="OnRegisterClicked"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

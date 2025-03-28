@@ -1,0 +1,148 @@
+[
+  {
+    "student_id": "65011212015",
+    "email": "650",
+    "password": "1234",
+    "first_name": "Nisarat",
+    "last_name": "Jaboon",
+    "img_url": "https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/258267201_1274876649653733_3597505181071611861_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=vMnZIEkjsqUQ7kNvgFDuqx0&_nc_oc=AdnPSPndsNoOunUh2kNv4MeIUWLE3mZEs0vTKAPqOoWK470LuKeBFWa4Lu3Nhi1k8Oc&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&_nc_gid=49aEvt367VUMU5JxLv1LOA&oh=00_AYH5E6_uVMyzqN6njLKwUM3949tcpSr9tc_NBWZ6ylRSeg&oe=67EC1423",
+    "faculty": "วิทยาการสารสนเทศ",
+    "major": "วิทยาการคอมพิวเตอร์",
+    "year": 3,
+    "gpa": 3.84,
+    "courses_enrolled": [
+      {
+        "course_id": "1204301",
+        "course_name": "System Analysis and Design",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "B+",
+        "instructor": "Dr. Emily Johnson"
+      },
+      {
+        "course_id": "1204302",
+        "course_name": "Algorithm Analysis and Design",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "B",
+        "instructor": "Dr. Emily Johnson"
+      },
+      {
+        "course_id": "1204303",
+        "course_name": "Mobile Application Development",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "A",
+        "instructor": "Dr. Emily Johnson"
+      },
+      {
+        "course_id": "1204304",
+        "course_name": "Computer Science Seminar",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "A",
+        "instructor": "Dr. Emily Johnson"
+      }
+    ]
+  },
+  {
+    "student_id": "65011212016",
+    "email": "651",
+    "password": "5678",
+    "first_name": "Pattara",
+    "last_name": "Suksai",
+    "img_url": "https://example.com/student2.jpg",
+    "faculty": "วิทยาการสารสนเทศ",
+    "major": "วิศวกรรมคอมพิวเตอร์",
+    "year": 2,
+    "gpa": 3.60,
+    "courses_enrolled": [
+      {
+        "course_id": "1204305",
+        "course_name": "Computer Graphics",
+        "year": 2024,
+        "term": 2,
+        "credits": 3,
+        "grade": "A",
+        "instructor": "Dr. John Smith"
+      },
+      {
+        "course_id": "1204306",
+        "course_name": "Software Engineering",
+        "year": 2024,
+        "term": 2,
+        "credits": 3,
+        "grade": "B",
+        "instructor": "Dr. James Carter"
+      }
+    ]
+  },
+  {
+    "student_id": "65011212017",
+    "email": "652",
+    "password": "abcd",
+    "first_name": "Kanya",
+    "last_name": "Phongsai",
+    "img_url": "https://example.com/student3.jpg",
+    "faculty": "วิทยาการสารสนเทศ",
+    "major": "เทคโนโลยีสารสนเทศ",
+    "year": 1,
+    "gpa": 3.80,
+    "courses_enrolled": [
+      {
+        "course_id": "1204307",
+        "course_name": "Artificial Intelligence",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "A",
+        "instructor": "Dr. Mary Lee"
+      },
+      {
+        "course_id": "1204308",
+        "course_name": "Theory of Computation",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "B+",
+        "instructor": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "student_id": "65011212018",
+    "email": "653",
+    "password": "efgh",
+    "first_name": "Arthit",
+    "last_name": "Srisai",
+    "img_url": "https://example.com/student4.jpg",
+    "faculty": "วิทยาการสารสนเทศ",
+    "major": "ระบบสารสนเทศ",
+    "year": 4,
+    "gpa": 3.75,
+    "courses_enrolled": [
+      {
+        "course_id": "1204309",
+        "course_name": "Cyber Security",
+        "year": 2024,
+        "term": 1,
+        "credits": 3,
+        "grade": "B+",
+        "instructor": "Dr. Daniel White"
+      },
+      {
+        "course_id": "1204310",
+        "course_name": "Cloud Computing",
+        "year": 2024,
+        "term": 2,
+        "credits": 3,
+        "grade": "A",
+        "instructor": "Dr. Karen Green"
+      }
+    ]
+  }
+]

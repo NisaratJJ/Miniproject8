@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Miniproject.Pages.HomePage"
+             xmlns:viewmodel="clr-namespace:Miniproject.Viewmodel"
+             xmlns:model="clr-namespace:Miniproject.Model"
+             x:DataType="viewmodel:HomeViewmodel"
+             Title="HomePage">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="0"
+                Spacing="10">
+                <CollectionView ItemsSource="{Binding Student}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Students">
+                            <VerticalStackLayout>
+                                <Frame Grid.Row="0"
+                                       BackgroundColor="#FFFBD70B"
+                                       Padding="0"
+                                       CornerRadius="0">
+                                    <Grid ColumnDefinitions="Auto,* ,Auto,Auto">
+                                        <!-- Logo & Title -->
+                                        <HorizontalStackLayout Grid.Column="0"
+                                                               Spacing="10"
+                                                               VerticalOptions="Center">
+                                            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mahasarakham_University_Emblem.png/960px-Mahasarakham_University_Emblem.png?20220115135307"
+                                                   HeightRequest="100"
+                                                   WidthRequest="120"
+                                                   VerticalOptions="Center"/>
+                                            <Label Text="Mahasarakham University"
+                                                   FontSize="24"
+                                                   FontAttributes="Bold"
+                                                   TextColor="White"
+                                                   VerticalOptions="Center"/>
+                                        </HorizontalStackLayout>
+
+
+                                        <BoxView Grid.Column="1"/>
+
+                                        <!-- Register Button -->
+
+
+                                        <!-- Profile Button -->
+                                        <Button Grid.Column="2"
+                                                Text="ลงทะเบียนเรียน"
+                                                BackgroundColor="#FF404240"
+                                                TextColor="White"
+                                                FontSize="18"
+                                                FontAttributes="Bold"
+                                                WidthRequest="150"
+                                                HeightRequest="50"
+                                                Margin="0,0,20,0"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewmodel}}, Path=GotoPageCommand}"
+                                                CommandParameter="RegisterPage"/>
+                                        <Frame Grid.Column="3"
+                                               WidthRequest="80"
+                                               HeightRequest="80"
+                                               CornerRadius="40"
+                                               BackgroundColor="#FFDCB400"
+                                               Padding="0"
+                                               Margin="0,0,20,0"
+                                               HorizontalOptions="End"
+                                               VerticalOptions="Center">
+                                            <ImageButton Source="jj.JPG"
+                                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewmodel}}, Path=GotoPageCommand}"
+                                                         CommandParameter="ProfilePage"
+                                                         HorizontalOptions="FillAndExpand"
+                                                         VerticalOptions="FillAndExpand"/>
+                                        </Frame>
+
+                                    </Grid>
+                                </Frame>
+                                <Border Padding="10"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="LightGray"
+                                        StrokeThickness="1"
+                                        BackgroundColor="#F5F5F5"
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="Fill">
+                                    <Image Source="https://genedu.msu.ac.th/2021/wp-content/uploads/2024/12/%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%9B-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1-Office-of-General-Education-Mahasarakham-University.png"
+                                           Aspect="AspectFill"
+                                           HorizontalOptions="Fill"
+                                           VerticalOptions="Fill"/>
+                                </Border>
+                                <Border Padding="10"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="LightGray"
+                                        StrokeThickness="1"
+                                        BackgroundColor="#F5F5F5"
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="Fill">
+                                    <Image Source="https://it.msu.ac.th/wp-content/uploads/2024/10/%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%95%E0%B9%88%E0%B8%AD-%E0%B8%A1%E0%B8%A1%E0%B8%AA-2568-1.jpg"
+                                           Aspect="AspectFill"
+                                           HorizontalOptions="Fill"
+                                           VerticalOptions="Fill"/>
+                                </Border>
+
+
+
+
+
+
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

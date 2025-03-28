@@ -1,0 +1,182 @@
+[
+  {
+    "course_id": "1204302",
+    "course_name": "Algorithm Analysis and Design",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": [],
+    "instructor": "Dr. Emily Johnson"
+  },
+  {
+    "course_id": "1204102",
+    "course_name": "Data Structures and Algorithms",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": [],
+    "instructor": "Dr. Jane Smith"
+  },
+  {
+    "course_id": "1204103",
+    "course_name": "Database Systems",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": [],
+    "instructor": "Dr. Emily Johnson"
+  },
+  {
+    "course_id": "1204201",
+    "course_name": "Operating Systems",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204102"],
+    "instructor": "Dr. William Brown"
+  },
+  {
+    "course_id": "1204303",
+    "course_name": "Software Engineering",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204102"],
+    "instructor": "Dr. Richard Lee"
+  },
+  {
+    "course_id": "1204304",
+    "course_name": "Computer Networks",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204103"],
+    "instructor": "Dr. Susan Adams"
+  },
+  {
+    "course_id": "1204202",
+    "course_name": "Artificial Intelligence",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204102"],
+    "instructor": "Dr. Robert Green"
+  },
+  {
+    "course_id": "1204305",
+    "course_name": "Web Development",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204103"],
+    "instructor": "Dr. Michael Scott"
+  },
+  {
+    "course_id": "1204203",
+    "course_name": "Machine Learning",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204202"],
+    "instructor": "Dr. Linda White"
+  },
+  {
+    "course_id": "1204306",
+    "course_name": "Computer Vision",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204202"],
+    "instructor": "Dr. James Carter"
+  },
+  {
+    "course_id": "1204104",
+    "course_name": "Software Testing",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204303"],
+    "instructor": "Dr. Patricia Harris"
+  },
+  {
+    "course_id": "1204307",
+    "course_name": "Cloud Computing",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204305"],
+    "instructor": "Dr. Christopher King"
+  },
+  {
+    "course_id": "1204204",
+    "course_name": "Human-Computer Interaction",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204103"],
+    "instructor": "Dr. Daniel Turner"
+  },
+  {
+    "course_id": "1204401",
+    "course_name": "Computer Graphics",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204103"],
+    "instructor": "Dr. Nancy Mitchell"
+  },
+  {
+    "course_id": "1204205",
+    "course_name": "Big Data Analytics",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204202"],
+    "instructor": "Dr. Karen Lee"
+  },
+  {
+    "course_id": "1204308",
+    "course_name": "Blockchain Technology",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204306"],
+    "instructor": "Dr. David Harris"
+  },
+  {
+    "course_id": "1204105",
+    "course_name": "Distributed Systems",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204304"],
+    "instructor": "Dr. Sarah Collins"
+  },
+  {
+    "course_id": "1204206",
+    "course_name": "Natural Language Processing",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204202"],
+    "instructor": "Dr. Jessica Clark"
+  },
+  {
+    "course_id": "1204309",
+    "course_name": "Cyber Security",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204304"],
+    "instructor": "Dr. John White"
+  },
+  {
+    "course_id": "1204106",
+    "course_name": "Mobile Application Development",
+    "year": 2024,
+    "term": 3,
+    "credits": 3,
+    "prerequisites": ["1204305"],
+    "instructor": "Dr. Elizabeth Martin"
+  }
+]
